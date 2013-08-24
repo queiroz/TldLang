@@ -1,0 +1,23 @@
+{
+    "name": "queiroz/tld-lang",
+    "description": "",
+    "authors": [
+        {
+            "name": "Rodrigo Queiroz",
+            "email": "rodrigo@queiroz.org"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Queiroz\\TldLang": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
