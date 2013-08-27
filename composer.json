@@ -1,6 +1,9 @@
 {
     "name": "queiroz/tld-lang",
-    "description": "",
+    "description": "TldLang multi domain site language for Laravel 4",
+    "keywords": ["TldLang", "Multi domain site", "laravel", "php"],
+    "homepage": "https://github.com/queiroz/tldlang",
+    "license": "MIT",
     "authors": [
         {
             "name": "Rodrigo Queiroz",
