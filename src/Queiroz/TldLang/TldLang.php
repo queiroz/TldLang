@@ -5,6 +5,11 @@ class TldLang
 
 	protected $lang;
 
+	/**
+	 *  get http_host tld
+	 *  @return matched tld
+	 */
+
 	public function getTld() 
 	{
 
@@ -19,6 +24,11 @@ class TldLang
 
 	}
 
+	/**
+	 * set tld and respective language
+	 * @param array $lang .tld => 'en'
+	 */
+	
 	public function set($lang = array())
 	{
 		if(!empty($lang)) {
@@ -27,6 +37,10 @@ class TldLang
 			throw new \Exception('method set(), missing parameter of type array');
 		}
 	}
+
+	/**
+	 * Instantiate and set tld and language
+	 */
 
 	public function init()
 	{
