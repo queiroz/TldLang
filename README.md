@@ -10,7 +10,9 @@ Add TldLang to your composer.json file:
 
 `
 "require": {
+
 	"queiroz/tld-lang": "dev-master"
+	
 }
 `
 
@@ -37,9 +39,13 @@ you can simply change the system language based on this .tlds
 
 `
 TldLang::set(array(
+
 	'.com' 	=> 	'en',
+
 	'.es'	=> 	'es',
+
 	'.fr'	=>	'fr'
+
 ));
 `
 
