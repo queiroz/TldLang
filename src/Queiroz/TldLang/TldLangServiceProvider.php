@@ -29,9 +29,17 @@ class TldLangServiceProvider extends ServiceProvider {
 	public function register()
 	{
 
-		$this->app['tldlang'] = $this->app->share(function() {
+		$this->app['TldLang'] = $this->app->share(function() {
 			
 			return new TldLang();
+
+		});
+
+		$this->app->booting(function() {
+		  
+		  $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+
+		  $loader->alias('TldLang', 'Queiroz\TldLang\Facades\TldLang');
 
 		});
 
@@ -44,7 +52,7 @@ class TldLangServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return array('TldLang');
 	}
 
 }

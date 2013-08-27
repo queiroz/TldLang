@@ -10,7 +10,7 @@ class TldLang
 	 *  @return matched tld
 	 */
 
-	public function getTld() 
+	protected function getTld() 
 	{
 
 		// regex to get .tdl from host
