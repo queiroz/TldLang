@@ -44,19 +44,24 @@ class TldLang
 
 	public function init()
 	{
+
 		$tld = $this->getTld();
 
-		foreach($this->lang as $key => $value) {
+		if(empty($this->lang)) {
+			
+			$locale = "en";
 
-			if($key == $tld) {
-				$locale = $value;
-			} else {
-				$locale = "";
+		} else {
+			
+			foreach($this->lang as $key => $value) {
+
+				if($key == $tld) {
+					$locale = $value;
+				}
+
 			}
 
 		}
-
-		if(empty($locale)) { $locale = "en"; }
 
 		// remove tld from url
 		$url = preg_replace('/\.([a-z\.]{2,6})\/$/', '', \Config::get('app.url'));
