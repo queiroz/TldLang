@@ -24,7 +24,7 @@ class TldLang
 		if(!empty($lang)) {
 			$this->lang = $lang;
 		} else {
-			throw new Exception('you must pass a array with tld and respective language');
+			throw new \Exception('method set(), missing parameter of type array');
 		}
 	}
 
