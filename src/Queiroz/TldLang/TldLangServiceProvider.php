@@ -28,7 +28,13 @@ class TldLangServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+
+		$this->app['tldlang'] = $this->app->share(function() {
+			
+			return new TldLang();
+
+		});
+
 	}
 
 	/**
