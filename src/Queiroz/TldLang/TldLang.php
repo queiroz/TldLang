@@ -14,7 +14,7 @@ class TldLang
 	{
 
 		// regex to get .tdl from host
-		$tld = preg_match( '/\.([a-z\.]{2,6})$/', \Request::server('HTTP_HOST'), $match );
+		$tld = preg_match( '/\.\w{2,5}\.\w{2,3}|\.\w{2,5}\b/', \Request::server('HTTP_HOST'), $match );
 
 		if($tld) {
 			return $match[0];
@@ -64,7 +64,7 @@ class TldLang
 		}
 
 		// remove tld from url
-		$url = preg_replace('/\.([a-z\.]{2,6})\/$/', '', \Config::get('app.url'));
+		$url = preg_replace('/\.\w{2,5}\.\w{2,3}|\.\w{2,5}\b/', '', \Config::get('app.url'));
 
 		// set new url
 		\Config::set('app.url', $url . $tld);
